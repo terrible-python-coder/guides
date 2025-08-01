@@ -1,10 +1,11 @@
 # Immich Migration
-Who is this guide for?
+### Who is this guide for?
 * Someone who followed the @Serversathome guide to setting up Immich.* 
-High level plan for migration:
+### High level plan for migration:
 * Create the new dataset configuration `/mnt/tank/configs/immich1` (i.e. do not touch `/mnt/tank/configs/immich`)
 * Sync the data to the new dataset, using rsync `immich -> immich1`
-* Spin up Immich application, as a second instance, from TrueNAS Discover Apps. Must have a unique name and port, as it will be running con-current.
+* Spin up Immich application, as a second instance, from TrueNAS Discover Apps (must have a unique name and port, as it will be running concurrently).
+* Once everything is confirmed working, then pull down the first instance.
 
 ## Step 1 - Create new dataset
 * Create a new dataset `/mnt/tank/configs/immich1` - Apps permissions
@@ -45,8 +46,8 @@ rsync -avhz --progress /mnt/tank/configs/immich/db/ /mnt/tank/configs/immich1/db
 * `ls -l`, etc.. etc..
 
 ## Step 4 - note the existing install config
-* Grab the Database Password: from the truenas app configuration page
-* Grab the Redis Password: from the truenas app configuration page
+* Grab the Database Password: from the truenas app configuration page (I don't know if this is essential - but didn't want to risk it)
+* Grab the Redis Password: from the truenas app configuration page (I don't know if this is essential - but didn't want to risk it)
 
 ## Step 5 - Install Immich (again!)
 * On TrueNAS:
@@ -67,7 +68,7 @@ rsync -avhz --progress /mnt/tank/configs/immich/db/ /mnt/tank/configs/immich1/db
 * UserID: `568`
 * GroupID: `568` 
 ### Network Configuration
-* Port Number: `30042` (ensure this is unique - original install was 30041)
+* Port Number: `30042` (Ensure this is unique - original install was 30041)
 ### Storage Configuration
 * Use Old Storage Configuration (Deprecated): `Unchecked`
 * Data Storage (aka Upload Location):
