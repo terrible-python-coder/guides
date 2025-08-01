@@ -1,7 +1,6 @@
 # Immich Migration
 Who is this guide for?
-* Someone who followed the @Serversathome guide to setting up Immich.
-* 
+* Someone who followed the @Serversathome guide to setting up Immich.* 
 High level plan for migration:
 * Create the new dataset configuration `/mnt/tank/configs/immich1` (i.e. do not touch `/mnt/tank/configs/immich`)
 * Sync the data to the new dataset, using rsync `immich -> immich1`
