@@ -2,7 +2,7 @@
 ### Who is this guide for?
 * Someone who followed the original @Serversathome guide to setting up Immich, and now wants to migrate to the new folder structure.
 ### High level plan for migration:
-* Create the new dataset configuration `/mnt/tank/configs/immich1` (i.e. do not touch `/mnt/tank/configs/immich`)
+* Create the new dataset configuration `/mnt/tank/configs/immich1` (i.e. do not touch the original dataset `/mnt/tank/configs/immich`)
 * Create the new sub-datasets
 * Sync the data to the new dataset, using rsync `immich -> immich1`
 * Spin up Immich as a second instance, from TrueNAS Discover Apps (must have a unique name and port, as it will be running concurrently).
