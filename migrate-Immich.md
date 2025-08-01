@@ -55,7 +55,7 @@ rsync -avhz --progress /mnt/tank/configs/immich/db/ /mnt/tank/configs/immich1/db
 * On TrueNAS:
 * `Apps > Discover Apps`
 * Search: "Immich"
-* Click **Install Another Instance **
+* Click **Install Another Instance**
  
 ## Step 6 - Configure the New Instance
 ### Application name
