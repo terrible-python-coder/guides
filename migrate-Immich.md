@@ -9,7 +9,7 @@
 * Once everything is confirmed working, then pull down the first instance.
 
 ## Step 1 - Create new dataset
-* Create a new dataset `/mnt/tank/configs/immich1` - Apps permissions
+* Create a new dataset `/mnt/tank/configs/immich1` - Apps permissions. **Note:** you can call it what you like, but I will proceed with `immich1`
 
 ## Step 2 - Create new sub-datasets
 * Create 2x datasets underneath
