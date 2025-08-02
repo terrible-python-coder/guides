@@ -15,8 +15,8 @@
 ## Step 2 - Create new sub-datasets
 * Create 2x datasets underneath
    * `/mnt/tank/configs/immich1/data` - Apps permissions
-   *  `/mnt/tank/configs/immich1/db` - Generic permissions
-**Note:** since these datasets are volume mounnts in Docker, you can call them what you like.
+   *  `/mnt/tank/configs/immich1/db` - Generic permissions  
+**Note:** since these datasets are volume mounnts in Docker, you can also call them what you like.
 
 
 ## Step 3 - rsync
