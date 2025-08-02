@@ -6,17 +6,21 @@
 * Create the new sub-datasets `data` and `db`
 * Sync the data to the new dataset, using rsync `immich -> immich1`
 * Spin up Immich as a second instance, from TrueNAS Discover Apps (must have a unique name and port, as it will be running concurrently).
-* Once everything is confirmed working, then pull down the first instance.
+* Once everything is confirmed working, then pull down the first instance & delete the original dataset.
 
 ## Step 1 - Create new dataset
-* Create a new dataset `/mnt/tank/configs/immich1` - Apps permissions. **Note:** you can call it what you like, but I will proceed with `immich1`
+* Create a new dataset `/mnt/tank/configs/immich1` - Apps permissions.
+**Note:** you can call it what you like, but I will proceed with `immich1`
 
 ## Step 2 - Create new sub-datasets
 * Create 2x datasets underneath
    * `/mnt/tank/configs/immich1/data` - Apps permissions
    *  `/mnt/tank/configs/immich1/db` - Generic permissions
+**Note:** since these datasets are volume mounnts in Docker, you can call them what you like.
+
 
 ## Step 3 - rsync
+The rsync commands will create the necessary sub-directories in the new datasets. These commands assume the original dataset names are `{backups, library, profile, thumbs, video, upload}`. The required sub-directory names are: `{backups, library, profile, thumbs, encoded-video, upload}`.
 * Run rsync to sync the datasets, with the following commands:
 1. `rsync -avhz --progress /mnt/tank/configs/immich/backups/ /mnt/tank/configs/immich1/data/backups/` 
 1. `rsync -avhz --progress /mnt/tank/configs/immich/library/ /mnt/tank/configs/immich1/data/library/`
