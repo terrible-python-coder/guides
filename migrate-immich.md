@@ -20,7 +20,7 @@
 
 
 ## Step 3 - rsync
-The rsync commands will create the necessary sub-directories in the new datasets. These commands assume the original dataset names are `{backups, library, profile, thumbs, video, upload}`. The required sub-directory names are: `{backups, library, profile, thumbs, encoded-video, upload}`.
+The rsync commands will create the necessary sub-directories in the new datasets. These commands assume the original dataset names are `{backups, library, profile, thumbs, video, uploads}`. The required sub-directory names are: `{backups, library, profile, thumbs, encoded-video, upload}`.
 * Run rsync to sync the datasets, with the following commands:
 1. `rsync -avhz --progress /mnt/tank/configs/immich/backups/ /mnt/tank/configs/immich1/data/backups/` 
 1. `rsync -avhz --progress /mnt/tank/configs/immich/library/ /mnt/tank/configs/immich1/data/library/`
